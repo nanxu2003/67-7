@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORANA EAST TRADE PRIVATE LIMITED | Empowering Data Value</title>
+    <meta name="description" content="PORANA EAST TRADE PRIVATE LIMITED - Specialising in data analytics, big data engineering, and enterprise digital transformation. Based in the UK.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        qiupu: {
+                            main: '#0f172a',    /* Deep navy - text/emphasis */
+                            primary: '#2563eb', /* Tech blue - primary buttons/links */
+                            light: '#eff6ff',   /* Light blue background */
+                            accent: '#f59e0b',  /* Vibrant orange - data insights emphasis */
+                            gray: '#64748b'     /* Secondary text */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(37, 99, 235, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+        
+        /* Decorative background graphics */
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+            animation: move 10s infinite alternate;
+        }
+        .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #dbeafe; border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+        .blob-2 { bottom: 10%; right: -10%; width: 400px; height: 400px; background: #fff7ed; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        
+        @keyframes move {
+            from { transform: translate(0, 0) rotate(0deg); }
+            to { transform: translate(20px, 40px) rotate(10deg); }
+        }
+
+        /* Glassmorphism navigation */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+        }
+
+        /* Text gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="antialiased relative">
+
+    <!-- Background decorations -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2 fixed"></div>
+
+    <!-- 1. Top Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-qiupu-primary rounded-lg flex items-center justify-center text-white text-xl shadow-glow transition-transform group-hover:rotate-12">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-qiupu-main tracking-tight leading-none">PORANA EAST TRADE</h1>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-qiupu-gray">
+                <a href="#home" class="hover:text-qiupu-primary transition-colors">Home</a>
+                <a href="#services" class="hover:text-qiupu-primary transition-colors">Solutions</a>
+                <a href="#cases" class="hover:text-qiupu-primary transition-colors">Case Studies</a>
+                <a href="#about" class="hover:text-qiupu-primary transition-colors">About</a>
+                <a href="#contact" class="px-5 py-2.5 bg-qiupu-main text-white rounded-full hover:bg-qiupu-primary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Get In Touch
+                </a>
+            </div>
+            
+            <button class="md:hidden text-2xl text-qiupu-main">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (Split layout) -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    Big Data Engineering & Advanced Analytics Specialists · Est. UK 2025
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight mb-4 text-gradient">
+                    PORANA EAST TRADE PRIVATE LIMITED
+                </h1>
+                <h2 class="text-4xl lg:text-6xl font-black text-slate-900 leading-tight mb-6">
+                    Making Complex Data<br>
+                    <span class="text-gradient">Clear & Actionable</span>
+                </h2>
+                <p class="text-lg text-qiupu-gray mb-8 leading-relaxed max-w-lg">
+                    A UK-based digital innovation leader. We transform vast, chaotic information into precise business intelligence through advanced big data engineering architectures, positioning you at the forefront of the digital economy.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-qiupu-primary text-white font-bold rounded-lg shadow-soft hover:bg-blue-700 transition-all flex items-center gap-2">
+                        Start Your Project <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#services" class="px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-lg hover:border-qiupu-primary hover:text-qiupu-primary transition-all">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <!-- Abstract visual: Using Pexels image with CSS mask -->
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-all duration-500">
+                    <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Data Analysis Team" class="w-full h-auto object-cover">
+                    <!-- Floating data card -->
+                    <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs animate-bounce" style="animation-duration: 3s;">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600"><i class="fa-solid fa-chart-line"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-500">Data Processing Efficiency</p>
+                                <p class="text-sm font-bold text-slate-800">+ 320% <span class="text-green-500 text-xs">↑</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decorative dot matrix -->
+                <div class="absolute -z-10 top-[-20px] right-[-20px] w-full h-full pattern-dots text-blue-200"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Data Scrolling Ticker -->
+    <div class="bg-qiupu-main py-4 overflow-hidden whitespace-nowrap border-y border-slate-800">
+        <div class="inline-block animate-marquee text-slate-400 text-sm font-mono tracking-widest">
+            <span class="mx-8"><i class="fa-solid fa-terminal mr-2 text-qiupu-primary"></i>DATA_ENGINEERING_READY</span>
+            <span class="mx-8"><i class="fa-solid fa-database mr-2 text-qiupu-accent"></i>HADOOP_CLUSTER_ONLINE</span>
+            <span class="mx-8"><i class="fa-solid fa-shield-halved mr-2 text-green-500"></i>SECURITY_LEVEL_MAX</span>
+            <span class="mx-8"><i class="fa-solid fa-bolt mr-2 text-yellow-400"></i>REAL_TIME_ANALYTICS</span>
+            <span class="mx-8"><i class="fa-solid fa-code mr-2 text-pink-500"></i>PYTHON_PANDAS_NUMPY</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="mx-8"><i class="fa-solid fa-terminal mr-2 text-qiupu-primary"></i>DATA_ENGINEERING_READY</span>
+            <span class="mx-8"><i class="fa-solid fa-database mr-2 text-qiupu-accent"></i>HADOOP_CLUSTER_ONLINE</span>
+            <span class="mx-8"><i class="fa-solid fa-shield-halved mr-2 text-green-500"></i>SECURITY_LEVEL_MAX</span>
+        </div>
+    </div>
+    <style>
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: inline-block; animation: marquee 20s linear infinite; }
+    </style>
+
+    <!-- 4. About Us -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h3 class="text-sm font-bold text-qiupu-primary uppercase tracking-widest mb-2">WHO WE ARE</h3>
+                <h2 class="text-3xl font-bold text-slate-900">More Than Technologists—<br>Your Data Strategy Partners</h2>
+                <p class="mt-4 text-qiupu-gray">PORANA EAST TRADE PRIVATE LIMITED is headquartered in the United Kingdom, committed to providing first-tier digital transformation solutions to organisations nationwide.</p>
+            </div>
+            
+            <!-- 5. Core Values Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-soft transition-all group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-800">Robust Engineering Capability</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">From data collection interface development to petabyte-scale data warehouse construction—we possess solid foundational engineering expertise.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-soft transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl text-qiupu-accent mb-6 group-hover:bg-qiupu-accent group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-800">Deep Commercial Intelligence</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Beyond mere report generation. We uncover correlations within data through algorithmic analysis, empowering strategic business decisions.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-soft transition-all group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl text-green-600 mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-800">Enterprise-Grade Security</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Rigorous data anonymisation and access control mechanisms ensure absolute protection of your core business assets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Business Stats Divider -->
+    <section class="py-12 bg-slate-900 text-white text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-lg font-light opacity-80">Empowering <span class="text-4xl font-bold text-qiupu-primary mx-2">500+</span> organisations with data-driven solutions</p>
+        </div>
+    </section>
+
+    <!-- 7, 8, 9. Detailed Services (Alternating layouts) -->
+    <section id="services" class="py-24 bg-slate-50 overflow-hidden">
+        <div class="container mx-auto px-6 space-y-24">
+            
+            <!-- Module 7: Data Cleansing -->
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-blue-600 rounded-2xl transform translate-x-4 translate-y-4 opacity-10"></div>
+                    <img src="https://images.pexels.com/photos/17483874/pexels-photo-17483874/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-depicts-how-ai-could-help-understand-ecosystems-it-was-created-by-champ-panupong-techawongthawon-as-part-of-the-v.png?auto=compress&cs=tinysrgb&w=800" alt="Data Cleaning" class="rounded-2xl shadow-xl w-full relative z-10">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6">Large-Scale Data Cleansing & ETL Pipelines</h3>
+                    <p class="text-slate-600 mb-6 leading-loose">
+                        Dealing with disorganised raw data? We refine the signal from the noise. Through custom Python scripts and Kettle/Talend workflows, we process both structured and unstructured data efficiently.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-solid fa-check-circle text-qiupu-primary"></i> Automated handling of missing values and anomalies
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-solid fa-check-circle text-qiupu-primary"></i> Multi-source heterogeneous data integration
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-solid fa-check-circle text-qiupu-primary"></i> Data standardisation and normalisation
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Module 8: Visualisation BI (Reverse) -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="lg:w-1/2 relative" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-orange-500 rounded-2xl transform -translate-x-4 translate-y-4 opacity-10"></div>
+                    <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Data Visualization" class="rounded-2xl shadow-xl w-full relative z-10">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6">Interactive BI Dashboards</h3>
+                    <p class="text-slate-600 mb-6 leading-loose">
+                        Let your data tell its story. We design visually compelling, dynamic dashboards and management cockpits—accessible across desktop and mobile—making critical metrics instantly comprehensible.
+                    </p>
+                    <div class="flex gap-4 mb-6">
+                        <span class="px-4 py-2 bg-white border rounded text-xs font-bold text-slate-600">Tableau</span>
+                        <span class="px-4 py-2 bg-white border rounded text-xs font-bold text-slate-600">Power BI</span>
+                        <span class="px-4 py-2 bg-white border rounded text-xs font-bold text-slate-600">Looker</span>
+                    </div>
+                    <p class="text-sm text-slate-500 italic">"Not merely visually appealing—your compass for strategic decisions."</p>
+                </div>
+            </div>
+
+            <!-- Module 9: Cloud Architecture -->
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Server Room" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6">Big Data Architecture & Cloud Infrastructure</h3>
+                    <p class="text-slate-600 mb-6 leading-loose">
+                        Whether deploying on-premise data centres or utilising AWS, Microsoft Azure, or Google Cloud Platform—we provide comprehensive architectural consulting and implementation services. Ensuring high availability and elastic scalability for your systems.
+                    </p>
+                    <a href="#contact" class="text-qiupu-primary font-bold hover:underline">Schedule an Architect Consultation <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- Module 10: Machine Learning (New) -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="lg:w-1/2 relative" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-purple-500 rounded-2xl transform translate-x-4 translate-y-4 opacity-10"></div>
+                    <img src="https://images.pexels.com/photos/8386449/pexels-photo-8386449.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Machine Learning" class="rounded-2xl shadow-xl w-full relative z-10">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6">Machine Learning & Predictive Analytics</h3>
+                    <p class="text-slate-600 mb-6 leading-loose">
+                        Harness the power of artificial intelligence and machine learning algorithms for predictive modelling, customer behaviour analysis, and automated anomaly detection—transforming historical data into forward-looking intelligence.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-solid fa-check-circle text-purple-600"></i> Predictive maintenance and failure prevention
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-solid fa-check-circle text-purple-600"></i> Customer churn prediction and lifetime value analysis
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <i class="fa-solid fa-check-circle text-purple-600"></i> Demand forecasting and inventory optimisation
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. Real-Time Performance Metrics (Simulated charts) -->
+    <section class="py-20 bg-slate-900 text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-2xl font-bold mb-12">Real-Time Processing Capabilities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <!-- Metric Block 1 -->
+                <div class="bg-white/10 backdrop-blur border border-white/10 p-6 rounded-xl">
+                    <div class="text-4xl font-mono font-bold text-green-400 mb-2">99.8%</div>
+                    <div class="text-xs text-slate-400 uppercase">Accuracy Rate</div>
+                    <div class="w-full bg-slate-700 h-1 mt-4 rounded-full overflow-hidden">
+                        <div class="bg-green-400 h-full w-[99.8%]"></div>
+                    </div>
+                </div>
+                <!-- Metric Block 2 -->
+                <div class="bg-white/10 backdrop-blur border border-white/10 p-6 rounded-xl">
+                    <div class="text-4xl font-mono font-bold text-blue-400 mb-2">24/7</div>
+                    <div class="text-xs text-slate-400 uppercase">System Uptime</div>
+                    <div class="w-full bg-slate-700 h-1 mt-4 rounded-full overflow-hidden">
+                        <div class="bg-blue-400 h-full w-full animate-pulse"></div>
+                    </div>
+                </div>
+                <!-- Metric Block 3 -->
+                <div class="bg-white/10 backdrop-blur border border-white/10 p-6 rounded-xl">
+                    <div class="text-4xl font-mono font-bold text-yellow-400 mb-2">15ms</div>
+                    <div class="text-xs text-slate-400 uppercase">Average Latency</div>
+                     <div class="w-full bg-slate-700 h-1 mt-4 rounded-full overflow-hidden">
+                        <div class="bg-yellow-400 h-full w-[20%]"></div>
+                    </div>
+                </div>
+                <!-- Metric Block 4 -->
+                <div class="bg-white/10 backdrop-blur border border-white/10 p-6 rounded-xl">
+                    <div class="text-4xl font-mono font-bold text-purple-400 mb-2">50TB+</div>
+                    <div class="text-xs text-slate-400 uppercase">Data Throughput</div>
+                     <div class="w-full bg-slate-700 h-1 mt-4 rounded-full overflow-hidden">
+                        <div class="bg-purple-400 h-full w-[80%]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative background -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none" style="background-image: radial-gradient(#4f46e5 1px, transparent 1px); background-size: 30px 30px;"></div>
+    </section>
+
+    <!-- 11. Technology Stack Logo Wall -->
+    <section class="py-16 bg-white border-b border-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm text-slate-400 mb-8 uppercase tracking-widest">Powered by Modern Technology</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 text-slate-300">
+                <i class="fa-brands fa-python text-5xl hover:text-blue-500 transition-colors duration-300" title="Python"></i>
+                <i class="fa-brands fa-java text-5xl hover:text-red-500 transition-colors duration-300" title="Java"></i>
+                <i class="fa-brands fa-docker text-5xl hover:text-blue-400 transition-colors duration-300" title="Docker"></i>
+                <i class="fa-brands fa-linux text-5xl hover:text-black transition-colors duration-300" title="Linux"></i>
+                <i class="fa-brands fa-aws text-5xl hover:text-orange-500 transition-colors duration-300" title="Cloud"></i>
+                <i class="fa-brands fa-react text-5xl hover:text-cyan-400 transition-colors duration-300" title="React"></i>
+                <i class="fa-brands fa-google text-5xl hover:text-green-500 transition-colors duration-300" title="Google Cloud"></i>
+                <i class="fa-brands fa-microsoft text-5xl hover:text-blue-600 transition-colors duration-300" title="Azure"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Our Process -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-16">A Simple Four-Step Partnership</h2>
+            <div class="relative flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto">
+                <div class="absolute top-1/2 left-0 w-full h-1 bg-slate-200 -z-0 hidden md:block -translate-y-1/2"></div>
+                
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-soft relative z-10 w-64 mb-8 md:mb-0 transform hover:-translate-y-2 transition-transform">
+                    <div class="w-10 h-10 bg-qiupu-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4 border-4 border-white">1</div>
+                    <h4 class="font-bold mb-2">Discovery</h4>
+                    <p class="text-xs text-slate-500">Identifying data challenges and business objectives</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-soft relative z-10 w-64 mb-8 md:mb-0 transform hover:-translate-y-2 transition-transform">
+                    <div class="w-10 h-10 bg-qiupu-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4 border-4 border-white">2</div>
+                    <h4 class="font-bold mb-2">Solution Design</h4>
+                    <p class="text-xs text-slate-500">Architecting technical frameworks and implementation roadmaps</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-soft relative z-10 w-64 mb-8 md:mb-0 transform hover:-translate-y-2 transition-transform">
+                    <div class="w-10 h-10 bg-qiupu-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4 border-4 border-white">3</div>
+                    <h4 class="font-bold mb-2">Development & Deployment</h4>
+                    <p class="text-xs text-slate-500">Agile methodology with rapid validation cycles</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-soft relative z-10 w-64 transform hover:-translate-y-2 transition-transform">
+                    <div class="w-10 h-10 bg-qiupu-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4 border-4 border-white">4</div>
+                    <h4 class="font-bold mb-2">Delivery & Support</h4>
+                    <p class="text-xs text-slate-500">Comprehensive handover with long-term technical assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Case Studies -->
+    <section id="cases" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Featured Success Stories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                    <img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Logistics">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg">Logistics Route Optimisation</h4>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Leveraging geospatial data analysis to reduce transportation costs by 15%</p>
+                    </div>
+                </div>
+                 <!-- Case 2 -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Retail">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg">Retail Inventory Forecasting</h4>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Accurate demand prediction based on historical sales patterns and seasonal trends</p>
+                    </div>
+                </div>
+                 <!-- Case 3 -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                    <img src="https://images.pexels.com/photos/5716032/pexels-photo-5716032.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Finance">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg">Financial Risk Modelling</h4>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Real-time anomalous transaction monitoring to safeguard financial assets</p>
+                    </div>
+                </div>
+                <!-- Case 4 (New) -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                    <img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Healthcare">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg">Healthcare Analytics Platform</h4>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Patient outcome prediction and resource allocation optimisation for NHS trusts</p>
+                    </div>
+                </div>
+                <!-- Case 5 (New) -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                    <img src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Manufacturing">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg">Manufacturing Quality Control</h4>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Computer vision defect detection reducing waste by 28% in production lines</p>
+                    </div>
+                </div>
+                <!-- Case 6 (New) -->
+                <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                    <img src="https://images.pexels.com/photos/6553200/6553200.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" alt="Energy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg">Energy Consumption Analytics</h4>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Smart grid data analysis enabling 20% reduction in commercial energy costs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Client Testimonials -->
+    <section class="py-20 bg-qiupu-light">
+        <div class="container mx-auto px-6 text-center">
+            <i class="fa-solid fa-quote-left text-4xl text-blue-200 mb-6"></i>
+            <h2 class="text-2xl font-bold text-slate-800 italic max-w-3xl mx-auto leading-relaxed">
+                "PORANA EAST TRADE PRIVATE LIMITED demonstrated exceptional professional capability. They not only constructed our data warehouse but fundamentally helped us understand the value of our data assets. Technically superb with remarkably responsive support."
+            </h2>
+            <div class="mt-8 flex justify-center items-center gap-4">
+                <div class="w-12 h-12 bg-slate-300 rounded-full overflow-hidden">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Client">
+                </div>
+                <div class="text-left">
+                    <p class="font-bold text-slate-900">Jonathan Pemberton</p>
+                    <p class="text-xs text-slate-500">Chief Information Officer, Leading Manufacturing Enterprise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15, 16. Security & Recruitment -->
+    <div class="grid md:grid-cols-2 bg-slate-900 text-white">
+        <!-- 15. Security -->
+        <div class="p-16 border-r border-slate-800 flex flex-col justify-center items-start">
+            <div class="text-qiupu-primary text-4xl mb-6"><i class="fa-solid fa-shield-cat"></i></div>
+            <h3 class="text-2xl font-bold mb-4">Data Security Commitment</h3>
+            <p class="text-slate-400 mb-6">We maintain strict compliance with UK GDPR and data protection regulations. All engagements include comprehensive non-disclosure agreements (NDAs). We never retain client source data, ensuring absolute protection of your commercial confidentiality.</p>
+            <a href="#" class="text-sm underline hover:text-qiupu-primary">View Security Whitepaper</a>
+        </div>
+        <!-- 16. Recruitment -->
+        <div class="p-16 flex flex-col justify-center items-start bg-slate-800">
+            <div class="text-qiupu-accent text-4xl mb-6"><i class="fa-solid fa-users-viewfinder"></i></div>
+            <h3 class="text-2xl font-bold mb-4">Join Our Team</h3>
+            <p class="text-slate-400 mb-6">Seeking passionate data professionals. If you're proficient in Python, Java, or modern frontend technologies, we'd welcome your application. We offer competitive compensation packages and exceptional career development opportunities.</p>
+            <a href="mailto:contact@poranaeasttrade.bond" class="px-6 py-2 border border-white rounded hover:bg-white hover:text-slate-900 transition-colors">Submit Your CV</a>
+        </div>
+    </div>
+
+    <!-- 17, 18, 19. Contact Section (Large module) -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Get In Touch</h2>
+                <p class="text-slate-500 mt-2">Let's discuss your next big data initiative</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
+                <!-- 18. Contact Information -->
+                <div class="bg-qiupu-main p-12 text-white flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-qiupu-primary rounded-full blur-3xl opacity-30"></div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-8">Contact Information</h3>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase mb-1">Office Address</p>
+                                    <p class="font-medium leading-relaxed">C/o Panneerselvem, Hno. 2, Nr Sbi Bank, Quilapalayam Kottakuppam</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase mb-1">Email</p>
+                                    <p class="font-medium text-lg">contact@poranaeasttrade.bond</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase mb-1">Telephone</p>
+                                    <p class="font-medium text-2xl tracking-wider text-qiupu-accent">6188718207</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <div class="w-full h-48 bg-slate-800 rounded-xl flex items-center justify-center border border-slate-700">
+                            <span class="text-slate-500"><i class="fa-solid fa-map"></i> Map Loading Area</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <p class="text-sm text-slate-400 mb-4">Follow Us:</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-qiupu-primary transition-all" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-qiupu-primary transition-all" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-qiupu-primary transition-all" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 19. Contact Form -->
+                <div class="p-12">
+                    <form onsubmit="event.preventDefault(); alert('Thank you for your enquiry. We will contact you shortly!');">
+                        <div class="grid grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-qiupu-primary focus:ring-1 focus:ring-qiupu-primary transition-colors" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Phone</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-qiupu-primary focus:ring-1 focus:ring-qiupu-primary transition-colors" placeholder="Contact number">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-qiupu-primary focus:ring-1 focus:ring-qiupu-primary transition-colors" placeholder="name@company.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Your Requirements</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:border-qiupu-primary focus:ring-1 focus:ring-qiupu-primary transition-colors" placeholder="Please describe your business requirements or technical challenges..."></textarea>
+                        </div>
+                        <button class="w-full py-4 bg-qiupu-primary text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 20. Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8 text-slate-600 text-sm">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h5 class="text-slate-900 font-bold text-lg mb-4">PORANA EAST TRADE PRIVATE LIMITED</h5>
+                    <p class="leading-relaxed mb-4">Focused on data, beyond data.<br>Your digital transformation partner.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center hover:bg-qiupu-primary hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center hover:bg-qiupu-primary hover:text-white transition-colors" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center hover:bg-qiupu-primary hover:text-white transition-colors" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-slate-900 font-bold mb-4">Solutions</h6>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-qiupu-primary">Enterprise Data Platforms</a></li>
+                        <li><a href="#" class="hover:text-qiupu-primary">E-commerce Analytics</a></li>
+                        <li><a href="#" class="hover:text-qiupu-primary">Business Intelligence Dashboards</a></li>
+                        <li><a href="#" class="hover:text-qiupu-primary">Cloud Infrastructure</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-slate-900 font-bold mb-4">Support & Services</h6>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-qiupu-primary">Technical Documentation</a></li>
+                        <li><a href="#" class="hover:text-qiupu-primary">SLA Standards</a></li>
+                        <li><a href="#" class="hover:text-qiupu-primary">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-slate-900 font-bold mb-4">Stay Updated</h6>
+                    <div class="flex">
+                        <input type="text" placeholder="Your email address" class="px-3 py-2 bg-white border border-slate-300 rounded-l focus:outline-none w-full">
+                        <button class="bg-qiupu-main text-white px-4 rounded-r hover:bg-qiupu-primary transition-colors"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 PORANA EAST TRADE PRIVATE LIMITED. All Rights Reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-qiupu-primary">Privacy Policy</a>
+                    <a href="#" class="hover:text-qiupu-primary">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.add('bg-white/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.remove('bg-white/95');
+            }
+        });
+    </script>
+</body>
+</html>
